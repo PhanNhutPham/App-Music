@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_color_background"
+    tools:context=".View.AlbumInfoActivity">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:src="@drawable/ic_arrow_back"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+    />
+    <ImageView
+        android:id="@+id/cover_album"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/baseline_home_24" />
+
+    <!-- Title Album -->
+    <TextView
+        android:id="@+id/title_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Album Title"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:layout_below="@id/cover_album"
+        android:layout_marginTop="16dp"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/llartist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/title_album"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/picture_artist"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/user"
+            app:civ_border_color="#6A6A6A"
+            app:civ_border_width="2dp" />
+
+
+        <TextView
+            android:id="@+id/name_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Artist Name"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/type_album"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#A6A6A6"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/llartist"
+        android:textSize="17dp"
+        android:text="Album . 2023" />
+
+    <LinearLayout
+        android:id="@+id/llplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/type_album"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnShare"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_playlist_add_24"
+            app:civ_border_color="#00E45EB0"
+            app:civ_border_width="2dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnDownload"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_arrow_downward_24"
+            app:civ_border_color="#00E45EB0"
+            app:civ_border_width="2dp" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnMore"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_more_vert_24"
+            app:civ_border_color="#00E45EB0"
+            app:civ_border_width="2dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnPlay"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="5"
+            android:src="@drawable/baseline_play_arrow_24"
+            android:layout_marginEnd="5dp"
+            app:civ_border_color="@color/green"
+            app:civ_border_width="2dp" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_listTracks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llplay"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/gradient_color_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Đặt tên cho danh sách phát của bạn"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/Ed_nameplaylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:hint="Nhập tên Playlist"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="20sp"
+        android:textColor="@android:color/darker_gray"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="Hủy"
+            android:backgroundTint="#777777"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Tạo"
+            android:textColor="@color/black"
+            android:backgroundTint="#1ed760"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="main_background">#19191b</color>
+    <color name="pink">#e45eb0</color>
+    <color name="green">#34e3c4</color>
+    <color name = "m1">#006450</color>
+    <color name = "m2">#8400e7</color>
+    <color name = "m3">#e8115b</color>
+    <color name = "m4">#148a08</color>
+    <color name = "m5">#477d95</color>
+    <color name = "m6">#503750</color>
+
+</resources>

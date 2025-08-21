@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Search_Library">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_color_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#282f32"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/Iv_BackAlbum"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:src="@drawable/baseline_arrow_back_24"
+                tools:ignore="ContentDescription" />
+
+            <EditText
+                android:id="@+id/ED_search"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/custom_edittext"
+                android:hint="Tìm kiếm trong thư viện "
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="17dp"
+                tools:ignore="Autofill,HardcodedText,RtlHardcoded,RtlSymmetry,SpUsage,TextFields,TouchTargetSizeCheck" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LL_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Tìm nội dung bạn yêu thích"
+                android:textSize="25dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                tools:ignore="HardcodedText,InefficientWeight,NestedWeights,SpUsage" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:text="Tìm mọi nội dung bạn thích, theo dõi hoặc tạo"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                tools:ignore="HardcodedText,InefficientWeight,NestedWeights,SpUsage,TextSizeCheck" />
+        </LinearLayout>
+        <ListView
+            android:id="@+id/lsv_search_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_weight="1"
+            tools:ignore="InefficientWeight,NestedWeights" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
